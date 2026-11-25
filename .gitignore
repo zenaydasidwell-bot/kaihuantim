@@ -1,0 +1,6 @@
+/MDK-ARM/kaihuantim/
+/MDK-ARM/*.lst
+/MDK-ARM/*.uvguix.*
+/MDK-ARM/*.uvoptx
+/MDK-ARM/.vscode/
+/MDK-ARM/debug.log
