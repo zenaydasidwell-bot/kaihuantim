@@ -89,7 +89,17 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-
+  //配置三路互补pwm
+  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+	HAL_TIMEx_PWMN_Start(&htim1,TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
+	HAL_TIMEx_PWMN_Start(&htim1,TIM_CHANNEL_2);
+	HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_3);
+	HAL_TIMEx_PWMN_Start(&htim1,TIM_CHANNEL_3);
+	TIM1->CCR1 = 2100;//配置比较器，输出pwm波形
+	TIM1->CCR2 = 4200;
+	TIM1->CCR3 = 6300;
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
